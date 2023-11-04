@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'lib/assets/jompick.jpg', // Replace with your image path
+                'assets/jompick.jpg', // Replace with your image path
                 width: 300, // Adjust the width as needed
                 height: 300, // Adjust the height as needed
               ),
