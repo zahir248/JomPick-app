@@ -1,5 +1,10 @@
 # JomPick-app
 
+untuk bahagian web
+- ![image](https://github.com/zahir248/JomPick-app/assets/90888537/532e1b46-8a8b-4cad-a665-4194b6a0501a)
+
+
+
 Module :
 > Add (register customer, register admin and staff, add item) : zahir
 
