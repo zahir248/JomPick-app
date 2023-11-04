@@ -6,6 +6,12 @@ untuk bahagian web
 
 > create satu folder dalam htdocs, rename, pastu letak php files
 
+untuk bahagian mobile
+> ![image](https://github.com/zahir248/JomPick-app/assets/90888537/b7999fff-220d-4977-b530-92a9dc9a51b6)
+
+> hanya letak php files dalam htdocs je, tak perlu letak dalam folder
+
+
 
 
 
