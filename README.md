@@ -38,7 +38,7 @@ untuk bahagian mobile
 
 > ![image](https://github.com/zahir248/JomPick-app/assets/90888537/0572e2fc-cebb-4a1b-b360-64d933eae912)
 
-> gantikan ip address di url dalam dart code yang pakai http request
+> gantikan ip address di url dalam dart code yang pakai http request untuk connect kan mobile app ke database
 
 
 Module :
