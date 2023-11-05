@@ -1,5 +1,11 @@
 # JomPick-app
 
+software
+> mobile app - Android studio
+> web app - Microsoft visual studio code
+> database - phpmyadmin/mysql workbench
+> localhost server - xampp 
+
 untuk bahagian web 
 > ![image](https://github.com/zahir248/JomPick-app/assets/90888537/532e1b46-8a8b-4cad-a665-4194b6a0501a)
 > ![image](https://github.com/zahir248/JomPick-app/assets/90888537/3f8ed6b6-c558-4d76-82e7-b76f36c2693f)
