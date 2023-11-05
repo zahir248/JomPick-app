@@ -2,8 +2,11 @@
 
 software
 > mobile app - Android studio
+
 > web app - Microsoft visual studio code
+
 > database - phpmyadmin/mysql workbench
+
 > localhost server - xampp 
 
 untuk bahagian web 
