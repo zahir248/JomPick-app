@@ -17,6 +17,13 @@ untuk bahagian web
 
 > create satu folder dalam htdocs, rename, pastu letak php files
 
+> ![image](https://github.com/zahir248/JomPick-app/assets/90888537/6a8bbd99-a117-439d-86a6-358e16d70d83)
+
+> run xampp, taip localhost/(nama folder projek) untuk run web
+
+
+
+
 
 untuk bahagian mobile
 > ![image](https://github.com/zahir248/JomPick-app/assets/90888537/b7999fff-220d-4977-b530-92a9dc9a51b6)
