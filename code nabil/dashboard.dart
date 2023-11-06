@@ -52,83 +52,37 @@ class _DashBoardState extends State<DashBoard> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
+
         appBar: AppBar(
           title: Text('JomPick', style:TextStyle(fontSize: 24)),
           backgroundColor: Colors.blue,
         ),
-        body:Center(
-          child: Padding(
-            padding: const EdgeInsets.all(5.0),
-            // Add padding to all sides
-            child: users.isEmpty
-                ? CircularProgressIndicator()
-                :  Center(
-              child: Scrollbar(
-                child:ListView.builder(
-                  itemCount: users.length,
-                  itemBuilder: (context, index) {
-                    return  Card(
-                      margin: EdgeInsets.all(8.0),
-                      child: Padding(
-                        padding: EdgeInsets.only(bottom: 15.0),
-                        child:Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            ListTile(
-                              leading: Image.asset(
-                                'assets/jompick.jpg', // Replace with your image path
-                                width: 90, // Adjust the width as needed
-                                height: 90, // Adjust the height as needed
-                              ),
-                              title: Text(users[index].fullName),
-                              subtitle: Text(users[index].emailAddress),
-                            ),
-                            Divider(
-                              height: 20.0,
-                              thickness: 1.0,
-                              color: Colors.grey.withOpacity(0.5),
-                              indent: 15.0,
-                              endIndent: 15.0,
-                            ),
-                            Column(
-                              children: <Widget>[
 
-                                ListTile(
-                                  leading: Text("Date", style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
-                                  horizontalTitleGap: 10,
-                                  trailing: Text("Time", style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
-                                ),],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                ElevatedButton(
-                                  onPressed: () {
-                                    _detailsUser(index);
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    fixedSize: Size(340, 45),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(100),
-                                    ),// Adjust the width and height as needed
-                                  ),
-                                  child: Text('Details', style: TextStyle(fontSize: 16)), // Adjust the font size as needed
-                                ),
-                              ],
-                            ),
-
-                          ],
-                        ),
+        body: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: TextField(
+                      style: TextStyle(fontSize: 18),
+                      decoration: InputDecoration(
+                        hintText: "Search",
+                        hintStyle: TextStyle(color: Colors.grey),
+                        prefixIcon: Icon(Icons.search, color: Colors.grey),
+                        border: InputBorder.none,
                       ),
-
-                    );},
+                    ),
                 ),
-              ),
-            ),
-          ),
+
+                Container(
+                child: _buildListView(),
+                ),
+              ]
         ),
 
         bottomNavigationBar: BottomNavigationBar(
@@ -153,6 +107,75 @@ class _DashBoardState extends State<DashBoard> {
           ],
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
+        ),
+      );
+  }
+
+  Widget _buildListView(){
+    return Expanded(
+      child: users.isEmpty
+          ? const CircularProgressIndicator()
+          :  Center(
+        child: Scrollbar(
+          child:ListView.builder(
+            itemCount: users.length,
+            itemBuilder: (context, index) {
+              return  Card(
+                margin: EdgeInsets.all(8.0),
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 15.0),
+                  child:Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      ListTile(
+                        leading: Image.asset(
+                          'assets/jompick.jpg', // Replace with your image path
+                          width: 90, // Adjust the width as needed
+                          height: 90, // Adjust the height as needed
+                        ),
+                        title: Text(users[index].fullName),
+                        subtitle: Text(users[index].emailAddress),
+                      ),
+                      Divider(
+                        height: 20.0,
+                        thickness: 1.0,
+                        color: Colors.grey.withOpacity(0.5),
+                        indent: 15.0,
+                        endIndent: 15.0,
+                      ),
+                      Column(
+                        children: <Widget>[
+
+                          ListTile(
+                            leading: Text("Date", style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
+                            horizontalTitleGap: 10,
+                            trailing: Text("Time", style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
+                          ),],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          ElevatedButton(
+                            onPressed: () {
+                              _detailsUser(index);
+                            },
+                            style: ElevatedButton.styleFrom(
+                              fixedSize: Size(340, 45),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100),
+                              ),// Adjust the width and height as needed
+                            ),
+                            child: Text('Details', style: TextStyle(fontSize: 16)), // Adjust the font size as needed
+                          ),
+                        ],
+                      ),
+
+                    ],
+                  ),
+                ),
+
+              );},
+          ),
         ),
       ),
     );
