@@ -4,7 +4,7 @@ session_start();
 
 // Check if form was submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $email = trim($_POST["email"]);
+    $username = trim($_POST["username"]);
     $password = trim($_POST["password"]);
 
     // Establish database connection (replace with your connection details)
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Fetch user data from the database, including role_id
-    $sql = "SELECT user_id, emailaddress, password, role_id FROM user WHERE LOWER(emailAddress) = LOWER('$email')";
+    echo $sql = "SELECT user_id, userName, password, role_id FROM user WHERE LOWER(userName) = LOWER('$username')";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
@@ -26,13 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if ($row["role_id"] == 1) {
                 // Admin role
                 $_SESSION["id"] = $row["user_id"];
-                $_SESSION["email"] = $row["emailAddress"];
+                $_SESSION["username"] = $row["userName"];
+                $_SESSION["role_id"] = $row["role_id"];
                 header("Location: admin_dashboard.php");
                 exit;
-            } elseif ($row["role_id"] == 2) {
+            } else if ($row["role_id"] == 2) {
                 // Staff role
                 $_SESSION["id"] = $row["user_id"];
-                $_SESSION["email"] = $row["emailAddress"];
+                $_SESSION["username"] = $row["userName"];
+                $_SESSION["role_id"] = $row["role_id"];
                 header("Location: staff_dashboard.php");
                 exit;
             } else {

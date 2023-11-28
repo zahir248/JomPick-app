@@ -38,14 +38,16 @@ if ($result_item->num_rows > 0) {
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="staff_dashboard.php">Dashboard</a>
-                </li>
-            </ul>
-        </div>
     </nav>
+    
+<div class="row ">
+            <!-- Side Nav -->
+            <div class="col-md-2">
+                <div class="list-group">
+                    <?php include 'sidenav.php' ?>
+                </div>
+            </div>
+             <!-- Side Nav -->
     <div class="container mt-4">
         <h1 class="text-center" >Manage Items</h1>
         <div class="row">
@@ -90,6 +92,7 @@ if ($result_item->num_rows > 0) {
             </div>
         </div>
     </div>
+</div>
 
     <!-- Add User Modal -->
 <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">

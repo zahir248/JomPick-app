@@ -4,6 +4,7 @@
     <title>JomPick | Log In</title>
     <!-- Include Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body > 
@@ -20,26 +21,27 @@ if (isset($_GET['error'])) {
 ?>
 
 <div class="container mt-5">
+
     <div class="row justify-content-center">
         <div class="col-md-6">
+            <div class="row justify-content-center" style="padding-bottom: 50px">
+                <img src="assets/JomPick_logo1.jpg" alt="Logo" style="width:150px;height:150px;">
+            </div>
             <div class="card">
-                <div class="card-header">
-                    <h4 class="text-center">JomPick</h4>
-                </div>
-                <div class="card-body">
+                <div class="card-body" >
                     <!-- Create a form to submit login credentials to 'login.php' -->
                     <form method="post" action="login.php">
-                        <label for="email">Email address</label>
+                        <label for="username">Username</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                                    &#128231; <!-- Envelope icon for email field -->
+                                    <i class="fas fa-user" style="padding:0px 4px 0px;"></i> <!-- Envelope icon for email field -->
                                 </span>
                             </div>
-                            <input type="email" class="form-control" name="email" placeholder="Email address" required>
+                            <input type="username" class="form-control" name="username" placeholder="Username" required>
                         </div>
                         <label for="password">Password</label>
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-3" style="padding-bottom: 10px;">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
                                     &#128274; <!-- Lock icon for password field -->
@@ -47,8 +49,8 @@ if (isset($_GET['error'])) {
                             </div>
                             <input type="password" class="form-control" name="password" placeholder="Password" required>
                         </div>
-                        <button type="submit" class="btn btn-dark btn-block" style="background-color: #343A40">
-                            Log In
+                        <button type="submit" class="btn btn-blue btn-block" style="background-color: #6D87EC; color: white;">
+                            Sign in
                         </button>
                     </form>
                 </div>

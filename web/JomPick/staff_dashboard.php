@@ -29,43 +29,33 @@ if ($result_user->num_rows > 0) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <!-- HEADER -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Staff Dashboard</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="staff_dashboard.php">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="manage_items.php">Manage Items</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" onclick="logout()">Logout</a>
-                </li>            
-            </ul>
-        </div>
     </nav>
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-3">
+    <!-- HEADER -->
+        <div class="row ">
+             <!-- Side Nav -->
+            <div class="col-md-2">
                 <div class="list-group">
-                    <a href="staff_dashboard.php" class="list-group-item list-group-item-action">Dashboard</a>
-                    <a href="manage_items.php" class="list-group-item list-group-item-action">Manage Items</a>
-                    <a href="#" class="list-group-item list-group-item-action" onclick="logout()">Logout</a>
+                    <?php include 'sidenav.php' ?>
                 </div>
             </div>
+             <!-- Side Nav -->
+
+            <!-- Your content -->
             <div class="col-md-9">
                 <!-- Your dashboard content goes here -->
                 <h1>Welcome to the Staff Dashboard</h1>
                 <p>Hello, <?php echo $user_name; ?>! You have successfully logged in.</p>
                 <!-- Add more content or widgets as needed -->
             </div>
+            <!-- Your content -->
+
         </div>
-    </div>
 
     <script>
     function logout() {
