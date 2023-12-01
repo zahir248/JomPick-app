@@ -47,7 +47,7 @@ if ($result_user->num_rows > 0) {
              <!-- Side Nav -->
 
             <!-- Your content -->
-            <div class="col-md-9">
+            <div class="col-md-9" >
                 <!-- Your dashboard content goes here -->
                 <h1>Welcome to the Staff Dashboard</h1>
                 <p>Hello, <?php echo $user_name; ?>! You have successfully logged in.</p>

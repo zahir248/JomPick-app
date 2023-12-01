@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>JomPick | Log In</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/JomPick_logo1.jpg">   
     <!-- Include Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -30,7 +31,7 @@ if (isset($_GET['error'])) {
             <div class="card">
                 <div class="card-body" >
                     <!-- Create a form to submit login credentials to 'login.php' -->
-                    <form method="post" action="login.php">
+                    <form method="post" action="function/login.php">
                         <label for="username">Username</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
