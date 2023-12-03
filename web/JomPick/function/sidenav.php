@@ -19,33 +19,41 @@ if (!isset($_SESSION["id"])) {
         <div class="sb-sidenav-menu">
         <div class="nav">
                 <div class="sb-sidenav-menu-heading">Dashboard</div>
-                <a class="nav-link" href="admin_dashboard.php">
+                <a class="nav-link" href="dashboard.php">
                         <i class="fas fa-chart-area"></i>
                         &nbsp;&nbsp;&nbsp;Analytics
                 </a>
-                <a class="nav-link" href="admin_dashboard.php">
-                        <i class="fas fa-user"></i>
-                        &nbsp;&nbsp;&nbsp;Profile
-                </a>
 
-                <div class="sb-sidenav-menu-heading">User Management</div>
-                        <a class="nav-link" href="admin_dashboard.php">
+                <div class="sb-sidenav-menu-heading">Staff Management</div>
+                        <a class="nav-link" href="staff_register.php">
                                 <i class="fa fa-address-card"></i>
-                                &nbsp;&nbsp;&nbsp;Staff Registrations
+                                &nbsp;&nbsp;&nbsp;Registration
                         </a>
-                        <a class="nav-link" href="manage_users.php">
+                        <a class="nav-link" href="staff_report.php">
                                 <i class="fas fa-table"></i>
-                                &nbsp;&nbsp;&nbsp;Staff Reports
+                                &nbsp;&nbsp;&nbsp;Staff List
                         </a>
 
                 <div class="sb-sidenav-menu-heading">JomPick Management</div>
-                        <a class="nav-link" href="admin_dashboard.php">
+                        <a class="nav-link" href="item_register.php">
                                 <i class="fa fa-file-text"></i>
-                                &nbsp;&nbsp;&nbsp;JomPick Registrations
+                                &nbsp;&nbsp;&nbsp;Registration
                         </a>
-                        <a class="nav-link" href="manage_items.php">
+                        <a class="nav-link" href="item_report.php">
                                 <i class="fas fa-table"></i>
-                                &nbsp;&nbsp;&nbsp;JomPick Reports
+                                &nbsp;&nbsp;&nbsp;Report
+                        </a>
+                        <a class="nav-link" href="dashboard.php">
+                                <i class="fas fa-user"></i>
+                                &nbsp;&nbsp;&nbsp;Customer List
+                        </a>
+                        <a class="nav-link" href="dashboard.php">
+                                <i class="fas fa-money-bill"></i>
+                                &nbsp;&nbsp;&nbsp;Penalty
+                        </a>
+                        <a class="nav-link" href="dashboard.php">
+                                <i class="fas fa-house"></i>
+                                &nbsp;&nbsp;&nbsp;Pick-up Locations
                         </a>
                 </div>
         </div>
@@ -59,25 +67,34 @@ if (!isset($_SESSION["id"])) {
         <div class="sb-sidenav-menu">
         <div class="nav">
                 <div class="sb-sidenav-menu-heading">Dashboard</div>
-                <a class="nav-link" href="staff_dashboard.php">
+                <a class="nav-link" href="dashboard.php">
                         <i class="fas fa-chart-area"></i>
                         &nbsp;&nbsp;&nbsp;Analytics
                 </a>
-                <a class="nav-link" href="staff_dashboard.php">
+                <a class="nav-link" href="dashboard.php">
                         <i class="fas fa-user"></i>
                         &nbsp;&nbsp;&nbsp;Profile
                 </a>
 
 
                 <div class="sb-sidenav-menu-heading">JomPick Management</div>
-                        <a class="nav-link" href="staff_dashboard.php">
+                        <a class="nav-link" href="item_register.php">
                                 <i class="fa fa-file-text"></i>
-                                &nbsp;&nbsp;&nbsp;JomPick Registrations
+                                &nbsp;&nbsp;&nbsp;Registration
                         </a>
-                        <a class="nav-link" href="staff_items.php">
+                        <a class="nav-link" href="item_report.php">
                                 <i class="fas fa-table"></i>
-                                &nbsp;&nbsp;&nbsp;JomPick Reports
+                                &nbsp;&nbsp;&nbsp;Report
                         </a>
+                        <a class="nav-link" href="dashboard.php">
+                                <i class="fas fa-user"></i>
+                                &nbsp;&nbsp;&nbsp;Customer List
+                        </a>
+                        <a class="nav-link" href="dashboard.php">
+                                <i class="fas fa-house"></i>
+                                &nbsp;&nbsp;&nbsp;Penalty
+                        </a>
+                        
                 </div>
         </div>
         <div class="sb-sidenav-footer">

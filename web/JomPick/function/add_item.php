@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION["id"])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->send_long_data(2, $imageData);
 
         if ($stmt->execute()) {
-            header("Location: manage_items.php"); // Redirect to the items management page
+            header("Location: ../item_register.php"); // Redirect to the items management page
             exit;
         } else {
             echo "Error adding item: " . $stmt->error;

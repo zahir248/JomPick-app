@@ -19,13 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // Admin role
                 $_SESSION["id"] = $row["user_id"];
                 $_SESSION["username"] = $row["userName"];
-                header("Location: ../admin_dashboard.php");
+                header("Location: ../dashboard.php");
                 exit;
             } else if ($row["role_id"] == 2) {
                 // Staff role
                 $_SESSION["id"] = $row["user_id"];
                 $_SESSION["username"] = $row["userName"];
-                header("Location: ../staff_dashboard.php");
+                header("Location: ../dashboard.php");
                 exit;
             } else {
                 header("Location: ../index.php?error=Unauthorized access");
