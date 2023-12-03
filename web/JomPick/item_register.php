@@ -60,10 +60,10 @@ if ($result_item->num_rows > 0) {
     
         <main>
             <div class="container-fluid px-4">
-            <h1 class="mt-4">JomPick Registration</h1>
+            <h1 class="mt-4">Add Item</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="dashboard.php">Analytics</a></li>
-                    <li class="breadcrumb-item active">JomPick Registration</li>
+                    <li class="breadcrumb-item active">Add Item</li>
                 </ol>
                 <div class="card mb-4">
                     <form method="post" action="function/add_item.php" enctype="multipart/form-data">
@@ -100,7 +100,7 @@ if ($result_item->num_rows > 0) {
                         </div>
                         <div class="card-footer d-flex align-items-center justify-content-between">
                             <div></div>
-                            <button type="submit" class="btn btn-primary btn-sm" style="background-color: #087EA4">Register</button>
+                            <button type="submit" class="btn btn-primary btn-sm" style="background-color: #087EA4">Add Item</button>
                     </form>
                 </div>
                 

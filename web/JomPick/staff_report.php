@@ -12,7 +12,7 @@ include 'api/db_connection.php'; // Include your database connection
 // Fetch user data from the database and join with the role table to get role names
 $sql_user = "SELECT u.*, r.rolename FROM user u
             JOIN role r ON u.role_id = r.role_id
-            WHERE u.role_id = 2 || u.role_id = 3";
+            WHERE u.role_id = 2";
 $result_user = $conn->query($sql_user);
 $users = array();
 
@@ -31,7 +31,7 @@ if ($result_user->num_rows > 0) {
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>JomPick | JomPick Report</title>
+    <title>JomPick | Staff List</title>
     <link rel="shortcut icon" type="image/jpg" href="assets/JomPick_logo1.jpg">   
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -62,10 +62,10 @@ if ($result_user->num_rows > 0) {
     
         <main>
             <div class="container-fluid px-4">
-            <h1 class="mt-4">User Report</h1>
+            <h1 class="mt-4">Staff Report</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="dashboard.php">Analytics</a></li>
-                    <li class="breadcrumb-item active">JomPick Report</li>
+                    <li class="breadcrumb-item active">Staff Report</li>
                 </ol>
                 <div class="card mb-4">
                     <form method="post" action="add_item.php" enctype="multipart/form-data">

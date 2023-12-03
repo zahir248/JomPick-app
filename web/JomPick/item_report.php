@@ -61,10 +61,10 @@ if ($result_item->num_rows > 0) {
     
         <main>
             <div class="container-fluid px-4">
-            <h1 class="mt-4">JomPick Report</h1>
+            <h1 class="mt-4">Item Report</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="dashboard.php">Analytics</a></li>
-                    <li class="breadcrumb-item active">Staff Report</li>
+                    <li class="breadcrumb-item active">Item Report</li>
                 </ol>
                 <div class="card mb-4">
                     <form method="post" action="add_item.php" enctype="multipart/form-data">

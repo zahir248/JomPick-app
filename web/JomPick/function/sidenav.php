@@ -27,7 +27,7 @@ if (!isset($_SESSION["id"])) {
                 <div class="sb-sidenav-menu-heading">Staff Management</div>
                         <a class="nav-link" href="staff_register.php">
                                 <i class="fa fa-address-card"></i>
-                                &nbsp;&nbsp;&nbsp;Registration
+                                &nbsp;&nbsp;&nbsp;Staff Registration
                         </a>
                         <a class="nav-link" href="staff_report.php">
                                 <i class="fas fa-table"></i>
@@ -37,11 +37,11 @@ if (!isset($_SESSION["id"])) {
                 <div class="sb-sidenav-menu-heading">JomPick Management</div>
                         <a class="nav-link" href="item_register.php">
                                 <i class="fa fa-file-text"></i>
-                                &nbsp;&nbsp;&nbsp;Registration
+                                &nbsp;&nbsp;&nbsp;Add Item
                         </a>
                         <a class="nav-link" href="item_report.php">
                                 <i class="fas fa-table"></i>
-                                &nbsp;&nbsp;&nbsp;Report
+                                &nbsp;&nbsp;&nbsp;Item Report
                         </a>
                         <a class="nav-link" href="dashboard.php">
                                 <i class="fas fa-user"></i>
@@ -84,7 +84,7 @@ if (!isset($_SESSION["id"])) {
                         </a>
                         <a class="nav-link" href="item_report.php">
                                 <i class="fas fa-table"></i>
-                                &nbsp;&nbsp;&nbsp;Report
+                                &nbsp;&nbsp;&nbsp;Item Report
                         </a>
                         <a class="nav-link" href="dashboard.php">
                                 <i class="fas fa-user"></i>
